@@ -22,3 +22,5 @@ notifications:
   endpoints:
     - name: jenkins
       url: http://where-ever-you-are-jenkins
+    - name: requestbin
+      url: http://requestbin:8000/1e0hfql1
