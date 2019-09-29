@@ -23,23 +23,23 @@
       </triggers>
     </org.jenkinsci.plugins.workflow.job.properties.PipelineTriggersJobProperty>
   </properties>
-  <defintion class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.45">
+  <definition class="org.jenkinsci.plugins.workflow.cps.CpsFlowDefinition" plugin="workflow-cps@2.45">
     <script>
 node {
-
+    
     sh &apos;env&apos;
 
-    git branch: &apos;docker-registry-jenkins&apos;, url: &apos;https://github.com/gt04/docker-mongo-sample-datasets&apos;
+    git branch: &apos;docker-registry-jenkins&apos;, url: &apos;https://github.com/g0t4/docker-mongo-sample-datasets&apos;
     sh &apos;docker version&apos;
-
+    
     image_tag=&quot;ci-${BUILD_NUMBER}&quot;
     repo_name=&quot;mongo-with-data&quot;
     registry=&quot;learning-registry:5000&quot;
     repo_full=&quot;${registry}/${repo_name}&quot;
     image=&quot;${repo_full}:${image_tag}&quot;
 
-    // note: errors might mean you didn&apos;t push mongo to vetted-registry and/or pushed something that's not mongo
-    // note: docker build is cached if nothing changes
+    // note: errors might mean you didn&apos;t push mongo to vetted-registry and/or pushed something that's not mongo 
+    // note: docker build is cached if nothing changes 
     sh &quot;docker build -t ${image} .&quot;
 
     // optional: show repos before push:
@@ -53,7 +53,7 @@ node {
     sh &quot;curl -s http://${registry}/v2/${repo_name}/tags/list&quot;
 
 }</script>
-    <sandbox></sandbox>
-  </defintion>
+    <sandbox>true</sandbox>
+  </definition>
   <disabled>false</disabled>
 </flow-definition>
