@@ -30,3 +30,7 @@ services:
       "--insecure-registry", "learning-registry:5000",
       "--insecure-registry", "vetted-registry:5000"
     ]
+
+volumes:
+  learning-jenkins-home:
+  dind-data-root:
