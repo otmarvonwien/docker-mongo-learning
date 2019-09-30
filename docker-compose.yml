@@ -22,7 +22,7 @@ services:
     ports:
       - "8000:8000"
   dind:
-    image: docker:dind
+    image: docker:18-dind
     privileged: true
     volumes:
       - dind-data-root:/var/lib/docker
