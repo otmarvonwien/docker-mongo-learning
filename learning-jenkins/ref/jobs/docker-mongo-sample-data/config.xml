@@ -13,9 +13,9 @@
             <org.jenkinsci.plugins.registry.notification.opt.impl.TriggerOnSpecifiedImageNames>
               <repoNames>
                 <string>vetted-registry:5000/mongo</string>
-                <string>localhost:55000/mongo</string>
+                <string>192.168.99.100:55000/mongo</string>
                 <string>vetted-registry:5000/busybox</string>
-                <string>localhost:55000/busybox</string>
+                <string>192.168.99.100:55000/busybox</string>
               </repoNames>
             </org.jenkinsci.plugins.registry.notification.opt.impl.TriggerOnSpecifiedImageNames>
           </options>
