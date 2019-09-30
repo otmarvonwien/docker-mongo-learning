@@ -8,7 +8,7 @@ services:
     volumes:
       - learning-jenkins-home:/var/jenkins_home
     ports:
-      - "127.0.0.1:8190:8080"
+      - "8190:8080"
     environment:
       DOCKER_HOST: tcp://dind:2375
   vetted-registry:
